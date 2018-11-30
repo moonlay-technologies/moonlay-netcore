@@ -7,17 +7,17 @@
     public abstract class Entity
     {
         int? _requestedHashCode;
-        int _Id;
+        Guid _Identity;
 
-        public virtual  int Id 
+        public virtual Guid Identity 
         {
             get
             {
-                return _Id;
+                return _Identity;
             }
             protected set
             {
-                _Id = value;
+                _Identity = value;
             }
         }
 
@@ -42,7 +42,7 @@
 
         public bool IsTransient()
         {
-            return this.Id == default(Int32);
+            return this.Identity == default(Guid);
         }
 
         public override bool Equals(object obj)
@@ -61,7 +61,7 @@
             if (item.IsTransient() || this.IsTransient())
                 return false;
             else
-                return item.Id == this.Id;
+                return item.Identity == this.Identity;
         }
 
         public override int GetHashCode()
@@ -69,7 +69,7 @@
             if (!IsTransient())
             {
                 if (!_requestedHashCode.HasValue)
-                    _requestedHashCode = this.Id.GetHashCode() ^ 31; // XOR for random distribution (http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx)
+                    _requestedHashCode = this.Identity.GetHashCode() ^ 31; // XOR for random distribution (http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx)
 
                 return _requestedHashCode.Value;
             }

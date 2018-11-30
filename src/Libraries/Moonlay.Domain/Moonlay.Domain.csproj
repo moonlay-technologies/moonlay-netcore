@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>Moonlay.Domain</Product>
+    <Description>DDD implementation</Description>
+    <PackageId>Moonlay.Domain</PackageId>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Entity
+AggregateRoot
+ValueObject
+ReadModel
+Repository
+UnitOfWork
+</PackageReleaseNotes>
+    <Version>1.0.0.2</Version>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Company>Moonlay.Domain</Company>
+    <Authors>Moonlay.Domain</Authors>
   </PropertyGroup>
 
   <ItemGroup>
