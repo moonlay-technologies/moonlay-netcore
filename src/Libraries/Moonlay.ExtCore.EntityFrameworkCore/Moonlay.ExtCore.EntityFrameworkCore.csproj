@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Product>Moonlay.ExtCore.EntityFrameworkCore</Product>
+    <Description>Moonlay.ExtCore.EntityFrameworkCore</Description>
+    <PackageId>Moonlay.ExtCore.EntityFrameworkCore</PackageId>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Moonlay.ExtCore.EntityFrameworkCore</PackageReleaseNotes>
+    <Version>1.0.0</Version>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Company>Moonlay.ExtCore.EntityFrameworkCore</Company>
+    <Authors>Moonlay.ExtCore.EntityFrameworkCore</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExtCore.Data.EntityFramework" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Moonlay.Domain\Moonlay.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
