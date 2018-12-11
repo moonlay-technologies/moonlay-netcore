@@ -13,7 +13,7 @@ ReadModel
 Repository
 UnitOfWork
 </PackageReleaseNotes>
-    <Version>1.0.0.2</Version>
+    <Version>1.0.0.4</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Company>Moonlay.Domain</Company>
     <Authors>Moonlay.Domain</Authors>
@@ -22,6 +22,7 @@ UnitOfWork
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="8.0.100" />
     <PackageReference Include="MediatR" Version="5.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
 
 </Project>
