@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moonlay.Faas.Base", "src\Application\Moonlay.Faas.Base\Moonlay.Faas.Base.csproj", "{C977D491-A338-40AC-A556-0AC29EC52DF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moonlay.ExtCore.EntityFrameworkCore", "src\Libraries\Moonlay.ExtCore.EntityFrameworkCore\Moonlay.ExtCore.EntityFrameworkCore.csproj", "{3B29CAE0-E91E-434F-B49F-33B49F01A063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moonlay.ExtCore.EntityFrameworkCore", "src\Libraries\Moonlay.ExtCore.EntityFrameworkCore\Moonlay.ExtCore.EntityFrameworkCore.csproj", "{3B29CAE0-E91E-434F-B49F-33B49F01A063}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moonlay.ExtCore.Mvc.Abstractions", "src\Libraries\Moonlay.ExtCore.Mvc.Abstractions\Moonlay.ExtCore.Mvc.Abstractions.csproj", "{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,18 @@ Global
 		{3B29CAE0-E91E-434F-B49F-33B49F01A063}.Release|x64.Build.0 = Release|Any CPU
 		{3B29CAE0-E91E-434F-B49F-33B49F01A063}.Release|x86.ActiveCfg = Release|Any CPU
 		{3B29CAE0-E91E-434F-B49F-33B49F01A063}.Release|x86.Build.0 = Release|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Debug|x64.Build.0 = Debug|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Debug|x86.Build.0 = Debug|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Release|x64.ActiveCfg = Release|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Release|x64.Build.0 = Release|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Release|x86.ActiveCfg = Release|Any CPU
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +85,7 @@ Global
 		{0C918823-595B-4067-9EEF-DB273887D67E} = {8D7BDD46-0AE4-47B1-BA0B-245FEC56A9BF}
 		{C977D491-A338-40AC-A556-0AC29EC52DF8} = {0C918823-595B-4067-9EEF-DB273887D67E}
 		{3B29CAE0-E91E-434F-B49F-33B49F01A063} = {B125260F-1CAF-40B2-9720-B632702F4F67}
+		{9AC4F7B4-0EC6-433A-9BA1-9B0CC2DF1229} = {B125260F-1CAF-40B2-9720-B632702F4F67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DC10CF98-9C9E-40E9-B395-1261F6F94D90}

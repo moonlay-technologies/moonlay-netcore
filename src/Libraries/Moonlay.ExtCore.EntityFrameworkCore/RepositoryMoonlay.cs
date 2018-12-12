@@ -4,7 +4,7 @@ using Moonlay.Domain;
 
 namespace Moonlay.ExtCore.EntityFrameworkCore
 {
-    public class RepositoryMoonlay<TEntity> : RepositoryBase<TEntity>, IRepository<TEntity> where TEntity : ReadModelExtCore
+    public abstract class RepositoryMoonlay<TEntity> : RepositoryBase<TEntity>, IRepository<TEntity> where TEntity : ReadModelExtCore
     {
         public IUnitOfWork UnitOfWork { get; private set; }
 
