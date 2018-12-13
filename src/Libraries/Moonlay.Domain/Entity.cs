@@ -22,6 +22,13 @@
         }
 
         private List<INotification> _domainEvents;
+
+        private bool _transient = false;
+        public void MarkTransient()
+        {
+            _transient = true;
+        }
+
         public IReadOnlyCollection<INotification> DomainEvents => _domainEvents?.AsReadOnly();
 
         public void AddDomainEvent(INotification eventItem)
@@ -42,7 +49,7 @@
 
         public bool IsTransient()
         {
-            return this.Identity == default(Guid);
+            return _transient;
         }
 
         public override bool Equals(object obj)

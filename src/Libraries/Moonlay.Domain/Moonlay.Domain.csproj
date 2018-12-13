@@ -13,10 +13,12 @@ ReadModel
 Repository
 UnitOfWork
 </PackageReleaseNotes>
-    <Version>1.0.0.6</Version>
+    <Version>1.0.3</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Company>Moonlay.Domain</Company>
     <Authors>Moonlay.Domain</Authors>
+    <FileVersion>1.0.3</FileVersion>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

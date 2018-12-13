@@ -4,21 +4,21 @@ namespace Moonlay.Domain
 {
     public interface IAuditTrail
     {
-        string CreatedBy { get; set; }
+        string CreatedBy { get; }
 
-        DateTimeOffset CreatedDate { get; set; }
+        DateTimeOffset CreatedDate { get; }
 
-        string ModifiedBy { get; set; }
+        string ModifiedBy { get; }
 
-        DateTimeOffset? ModifiedDate { get; set; }
+        DateTimeOffset? ModifiedDate { get; }
     }
 
     public interface ISoftDelete
     {
-        bool? Deleted { get; set; }
+        bool? Deleted { get; }
 
-        DateTimeOffset? DeletedDate { get; set; }
+        DateTimeOffset? DeletedDate { get; }
 
-        string DeletedBy { get; set; }
+        string DeletedBy { get; }
     }
 }
