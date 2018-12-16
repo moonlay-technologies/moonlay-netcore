@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Moonlay.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,42 +13,37 @@ namespace Moonlay
         {
             if (!(expression.Body is MemberExpression body))
             {
-                throw new ArgumentException(
+                throw new DomainException(
                   "expected property or field expression.");
             }
             var compiled = expression.Compile();
             var value = compiled();
             if (value == null)
             {
-                throw new ArgumentNullException(body.Member.Name);
+                throw new DomainNullException(body.Member.Name);
             }
         }
 
         public static void ThrowWhenTrue(Expression<Func<bool>> expression, string message = "invalid")
         {
-            //if (!(expression.Body is MemberExpression body))
-            //{
-            //    throw new ArgumentException("expected property or field expression.");
-            //}
-
             var compiled = expression.Compile();
             var value = compiled();
             if (value)
-                throw new ArgumentException(message);
+                throw new DomainException(message);
         }
 
         public static void ThrowIfNullOrEmpty<T>(Expression<Func<IEnumerable<T>>> expression)
         {
             if (!(expression.Body is MemberExpression body))
             {
-                throw new ArgumentException("expected property or field expression.");
+                throw new DomainException("expected property or field expression.");
             }
 
             var compiled = expression.Compile();
             var value = compiled();
             if (value == null || !value.Any())
             {
-                throw new ArgumentNullException(body.Member.Name);
+                throw new DomainNullException(body.Member.Name);
             }
         }
 
@@ -55,7 +51,7 @@ namespace Moonlay
         {
             if (!(expression.Body is MemberExpression body))
             {
-                throw new ArgumentException("expected property or field expression.");
+                throw new DomainException("expected property or field expression.");
             }
 
             var compiled = expression.Compile();
@@ -63,7 +59,7 @@ namespace Moonlay
 
             if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException("String is null or empty", body.Member.Name);
+                throw new DomainNullException(body.Member.Name, "String is null or empty");
             }
         }
 
@@ -72,6 +68,11 @@ namespace Moonlay
             IEnumerable<FluentValidation.Results.ValidationFailure> failures = errors.Select(o => new FluentValidation.Results.ValidationFailure(o.propName, o.message));
 
             return new ValidationException(failures);
+        }
+
+        public static void ErrorValidationAndThrow(params (string propName, string message)[] errors)
+        {
+            throw ErrorValidation(errors);
         }
     }
 }

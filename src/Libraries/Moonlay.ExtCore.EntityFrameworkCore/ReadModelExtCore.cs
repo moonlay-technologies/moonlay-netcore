@@ -4,6 +4,5 @@ namespace Moonlay.Domain
 {
     public abstract class ReadModelExtCore : ReadModel, IEntity
     {
-        
     }
 }

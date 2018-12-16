@@ -1,15 +1,15 @@
 ﻿namespace Moonlay.Domain
 {
-    using System;
     using MediatR;
+    using System;
     using System.Collections.Generic;
 
     public abstract class Entity
     {
-        int? _requestedHashCode;
-        Guid _Identity;
+        private int? _requestedHashCode;
+        private Guid _Identity;
 
-        public virtual Guid Identity 
+        public virtual Guid Identity
         {
             get
             {
@@ -24,9 +24,48 @@
         private List<INotification> _domainEvents;
 
         private bool _transient = false;
-        public void MarkTransient()
+
+        protected virtual void MarkTransient()
         {
             _transient = true;
+            _modified = false;
+            _deleted = false;
+        }
+
+        public virtual bool IsTransient()
+        {
+            return _transient;
+        }
+
+        private bool _modified = false;
+
+        protected virtual void MarkModified()
+        {
+            _modified = true;
+        }
+
+        public virtual bool IsModified()
+        {
+            return _modified;
+        }
+
+        private bool _deleted = false;
+
+        protected virtual void MarkRemoved()
+        {
+            _deleted = true;
+            _transient = false;
+            _modified = false;
+        }
+
+        public virtual bool IsRemoved()
+        {
+            return _deleted;
+        }
+
+        public virtual void Remove()
+        {
+            MarkRemoved();
         }
 
         public IReadOnlyCollection<INotification> DomainEvents => _domainEvents?.AsReadOnly();
@@ -45,11 +84,6 @@
         public void ClearDomainEvents()
         {
             _domainEvents?.Clear();
-        }
-
-        public bool IsTransient()
-        {
-            return _transient;
         }
 
         public override bool Equals(object obj)
@@ -82,8 +116,8 @@
             }
             else
                 return base.GetHashCode();
-
         }
+
         public static bool operator ==(Entity left, Entity right)
         {
             if (Object.Equals(left, null))

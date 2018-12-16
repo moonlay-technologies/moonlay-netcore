@@ -19,6 +19,16 @@ namespace Moonlay.Domain
             return !(EqualOperator(left, right));
         }
 
+        public static bool operator ==(ValueObject left, ValueObject right)
+        {
+            return EqualOperator(left, right);
+        }
+
+        public static bool operator !=(ValueObject left, ValueObject right)
+        {
+            return NotEqualOperator(left, right);
+        }
+
         protected abstract IEnumerable<object> GetAtomicValues();
 
         public override bool Equals(object obj)

@@ -16,6 +16,8 @@ namespace Microsoft.EntityFrameworkCore
         public static void ApplySoftDelete<T>(this EntityTypeBuilder<T> builder) where T : class, ISoftDelete
         {
             builder.Property(p => p.DeletedBy).HasMaxLength(32);
+
+            builder.HasQueryFilter(p => p.Deleted == null || (p.Deleted.HasValue && !p.Deleted.Value));
         }
     }
 }

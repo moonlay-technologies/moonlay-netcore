@@ -7,12 +7,12 @@
     <PackageId>Moonlay.ExtCore.EntityFrameworkCore</PackageId>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageReleaseNotes>Moonlay.ExtCore.EntityFrameworkCore</PackageReleaseNotes>
-    <Version>1.0.3</Version>
+    <Version>1.0.5</Version>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Company>Moonlay.ExtCore.EntityFrameworkCore</Company>
     <Authors>Moonlay.ExtCore.EntityFrameworkCore</Authors>
-    <FileVersion>1.0.3</FileVersion>
-    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <FileVersion>1.0.5</FileVersion>
+    <AssemblyVersion>1.0.5</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
