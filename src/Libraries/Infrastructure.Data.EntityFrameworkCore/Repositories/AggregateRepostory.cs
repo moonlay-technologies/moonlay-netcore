@@ -1,14 +1,12 @@
-﻿using ExtCore.Data.EntityFramework;
-using Core.Domain;
-using Core.Domain.ReadModels;
-using Core.Domain.Repositories;
+﻿using Core.Domain.ReadModels;
+using ExtCore.Data.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Core.Data.EntityFrameworkCore
+namespace Core.Domain.Repositories
 {
     public abstract class AggregateRepostory<TAggregate, TReadModel> : RepositoryBase<TReadModel>, IAggregateRepository<TAggregate, TReadModel>
         where TAggregate : AggregateRoot<TAggregate, TReadModel>

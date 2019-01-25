@@ -2,10 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>Core.Data.EntityFrameworkCore</Product>
+    <Description>Core.Data.EntityFrameworkCore</Description>
+    <PackageId>Core.Data.EntityFrameworkCore</PackageId>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Core.Data.EntityFrameworkCore</PackageReleaseNotes>
+    <Version>1.0.0.3</Version>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Company>Core.Data.EntityFrameworkCore</Company>
+    <Authors>Core.Data.EntityFrameworkCore</Authors>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ExtCore.Data.EntityFramework" Version="4.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>

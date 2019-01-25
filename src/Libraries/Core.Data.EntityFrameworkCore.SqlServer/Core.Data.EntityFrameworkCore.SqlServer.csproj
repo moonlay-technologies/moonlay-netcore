@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>Core.Data.EntityFrameworkCore.SqlServer</Product>
+    <Description>Core.Data.EntityFrameworkCore.SqlServer</Description>
+    <PackageId>Core.Data.EntityFrameworkCore.SqlServer</PackageId>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Core.Data.EntityFrameworkCore.SqlServer</PackageReleaseNotes>
+    <Version>1.0.0</Version>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Company>Core.Data.EntityFrameworkCore.SqlServer</Company>
+    <Authors>Core.Data.EntityFrameworkCore.SqlServer</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExtCore.Data" Version="4.0.0" />
+    <PackageReference Include="ExtCore.Data.EntityFramework.SqlServer" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.AspNetCore.Abstractions\Core.Mvc.Abstractions.csproj" />
+    <ProjectReference Include="..\Infrastructure.EntityFrameworkCore\Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
